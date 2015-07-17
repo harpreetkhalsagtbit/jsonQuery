@@ -2,6 +2,12 @@
 
 JSON Query - [Dojox/Json/Query] (https://github.com/maqetta/dojox/blob/master/json/query.js) converted into normal JavaScript File 
 
+## Install
+
+```bash
+$ npm install json_query
+```
+
 # How to Use?
 Since the code is same as [Dojox/Json/Query] (https://github.com/maqetta/dojox/blob/master/json/query.js). Its usability is also same.
 
