@@ -27,3 +27,12 @@ describe('deepSearchForSpecificKeyAndSpecificValueHavingRange', function() {
     assert.lengthOf(_res, 1)
   });
 });
+
+// Test Case 4
+describe('deepSearchForSpecificKeyAndSpecificValueHavingRange', function() {
+  it('deep Search For Specific Key And Specific Value Having Range', function() {
+    var _res = jsonQuery.query("$..[?name='Science']", data)
+    assert.lengthOf(_res, 2)
+  });
+});
+
