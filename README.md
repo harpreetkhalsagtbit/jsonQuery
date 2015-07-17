@@ -8,4 +8,4 @@ Since the code is same as [Dojox/Json/Query] (https://github.com/maqetta/dojox/b
 [How to Use] (https://dojotoolkit.org/reference-guide/1.10/dojox/json/query.html)
 
 # Quality Assurance
-Since the code is same as [Dojox/Json/Query] (https://github.com/maqetta/dojox/blob/master/json/query.js). Its Quality is also same. Since Dojo hasn't moved it into Dojo, it may have some issues.
+Since the code is same as [Dojox/Json/Query] (https://github.com/maqetta/dojox/blob/master/json/query.js). Its Quality is also same. Because it is in [Dojox](https://github.com/dojo/dojox) not in [Dojo](https://github.com/dojo/dojo), it may have some issues.
