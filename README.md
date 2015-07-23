@@ -13,7 +13,7 @@ $ npm install json_query
 # How to Use?
 Since the code is same as [Dojox/Json/Query] (https://github.com/maqetta/dojox/blob/master/json/query.js). Its usability is also same.
 
-**Example: **
+**Example:**
 ```js
 var jsonQuery = require('../query')();
 
