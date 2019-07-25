@@ -26,3 +26,8 @@ jsonQuery.query("$..[?class]", data)
 
 # Quality Assurance
 Since the code is same as [Dojox/Json/Query] (https://github.com/maqetta/dojox/blob/master/json/query.js). Its Quality is also same. Because it is in [Dojox](https://github.com/dojo/dojox) not in [Dojo](https://github.com/dojo/dojo), it may have some issues.
+
+## License and Copyright
+
+The jsonQuery is dual licensed under BSD 3-Clause and AFL same as Dojo Toolkit. For more information on the license please see the [License Information][].  The Dojo Toolkit is Copyright (c) 2005-2018, The JS Foundation.  All
+rights reserved.
