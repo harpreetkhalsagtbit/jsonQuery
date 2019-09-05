@@ -33,8 +33,10 @@ These include:
     ** NOTE: This operation adds properties to the data
 
     Example:
-    var jsonQuery = require('../query');
-    var _res = jsonQuery({pathPropName: "__path__"}).query("$..[?year>1975]", data2)
+    ```
+    var jsonQuery = require('query');
+    var _res = jsonQuery({pathPropName: "__path__"}).query("$..[?year>1975]", data)
+    ```
 
 # Quality Assurance
 Since the code is same as [Dojox/Json/Query](https://github.com/maqetta/dojox/blob/master/json/query.js). Its Quality is also same. Because it is in [Dojox](https://github.com/dojo/dojox) not in [Dojo](https://github.com/dojo/dojo), it may have some issues.

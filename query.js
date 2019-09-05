@@ -276,9 +276,7 @@ jsonQuery.query = function(/*String*/query,/*Object?*/obj){
 
   // Add path properties across the object (should be very quick for consecutive applications)
   if (jsonQuery.pathPropName) {
-    console.log("Adding paths");
     this._addPaths(obj, "");
-    console.log("Paths added");
   }
 
   var depth = 0;
