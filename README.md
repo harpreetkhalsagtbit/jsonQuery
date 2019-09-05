@@ -24,6 +24,18 @@ jsonQuery.query("$..[?class]", data)
 
 [How to Use](https://dojotoolkit.org/reference-guide/1.10/dojox/json/query.html)
 
+# Additional features #
+JSON Query contains some enhancments not found in the original implementation.
+These include:
+1) Path in results (Currently not supported when running in browser):
+    It is often useful to also recieve the paths to the found items.
+    By setting "pathPropName" when creating the JSON Query object, a property name containing the path will be created in each sub-object of the data.
+    ** NOTE: This operation adds properties to the data
+
+    Example:
+    var jsonQuery = require('../query');
+    var _res = jsonQuery({pathPropName: "__path__"}).query("$..[?year>1975]", data2)
+
 # Quality Assurance
 Since the code is same as [Dojox/Json/Query](https://github.com/maqetta/dojox/blob/master/json/query.js). Its Quality is also same. Because it is in [Dojox](https://github.com/dojo/dojox) not in [Dojo](https://github.com/dojo/dojo), it may have some issues.
 
