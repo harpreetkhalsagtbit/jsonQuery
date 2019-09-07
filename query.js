@@ -10,7 +10,10 @@ jsonQuery._addPaths = function(obj, path) {
         return;
     }
 
-    obj[this.pathPropName] = path;
+    Object.defineProperty(obj, this.pathPropName, {
+      value: path,
+      enumerable: false
+    });
 
     for(var key in obj) {
         if(obj.hasOwnProperty(key)) {
