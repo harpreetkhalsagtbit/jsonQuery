@@ -1,6 +1,6 @@
 {
   "name": "json_query",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Library for Searching in a JSON forked from dojox/json for the users don't want to use dojo in their project but still love and trust the libraries and modules created by Dojo Team",
   "main": "query.js",
   "scripts": {

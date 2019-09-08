@@ -37,7 +37,8 @@ These include:
     ```js
     var jsonQuery = require('query');
     var _res = jsonQuery({pathPropName: "__path__"}).query("$..[?year>1975]", data)
-
+    console.log(_res[1].__path__)
+    
     // output
     // ['bands']['Dire Straits']['albums']['1']
     ```
