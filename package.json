@@ -1,6 +1,6 @@
 {
   "name": "json_query",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Library for Searching in a JSON forked from dojox/json for the users don't want to use dojo in their project but still love and trust the libraries and modules created by Dojo Team",
   "main": "query.js",
   "scripts": {
@@ -9,6 +9,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/harpreetkhalsagtbit/jsonQuery.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
   },
   "keywords": [
     "json",
@@ -30,5 +36,8 @@
   "devDependencies": {
     "chai": "^3.1.0",
     "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "husky": "^3.0.5"
   }
 }
