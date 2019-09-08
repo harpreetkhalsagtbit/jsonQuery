@@ -1,4 +1,27 @@
 var jsonQuery = {};
+
+jsonQuery._addPaths = function(obj, path) {
+
+    if(typeof obj !== 'object') {
+        return;
+    }
+
+    if (typeof obj[this.pathPropName] !== 'undefined') {
+        return;
+    }
+
+    Object.defineProperty(obj, this.pathPropName, {
+      value: path,
+      enumerable: false
+    });
+
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key)) {
+            this._addPaths(obj[key], path + "['" + key + "']");
+        }
+    }
+}
+
 jsonQuery._slice = function(obj,start,end,step){
   // handles slice operations: [3:6:2]
   var len=obj.length,results = [];
@@ -253,6 +276,12 @@ jsonQuery.query = function(/*String*/query,/*Object?*/obj){
   //    This finds objects in array with a price less than 15.00 and sorts then
   //    by rating, highest rated first, and returns the first ten items in from this
   //    filtered and sorted list.
+
+  // Add path properties across the object (should be very quick for consecutive applications)
+  if (jsonQuery.pathPropName) {
+    this._addPaths(obj, "");
+  }
+
   var depth = 0;
   var str = [];
   query = query.replace(/"(\\.|[^"\\])*"|'(\\.|[^'\\])*'|[\[\]]/g,function(t){
@@ -337,7 +366,13 @@ jsonQuery.query = function(/*String*/query,/*Object?*/obj){
 
 // If this module is being used with node.js
 if(typeof module != 'undefined' && module.exports) {
-  module.exports = function() {
+  module.exports = function(params) {
+
+    // Merge params to this (compatible with ES5)
+    if (params) {
+      for (var attrname in params) { jsonQuery[attrname] = params[attrname]; }
+    }
+
     return jsonQuery
   }  
 }

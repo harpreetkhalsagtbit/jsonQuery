@@ -1,0 +1,122 @@
+{
+    "bands": {
+        "Pink Floyd": {
+            "formation": 1965,
+            "members": [
+                "Nick Mason",
+                "Roger Waters",
+                "Richard Wright",
+                "Syd Barrett",
+                "David Gilmour"
+            ],
+            "albums": [
+                {
+                    "title": "The Dark Side of the Moon",
+                    "year": 1972,
+                    "songs": [
+                        "Speak to Me",
+                        "Breath",
+                        "On the Run",
+                        "Time",
+                        "The Great Gig in the Sky",
+                        "Money",
+                        "Us and Them",
+                        "Any Clour You Like",
+                        "Brain Damage",
+                        "Eclipse"
+                    ]
+                },
+                {
+                    "title": "Wish You Were Here",
+                    "year": 1975,
+                    "songs": [
+                        "Shine On You Crazy Diamond",
+                        "Welcome to the Machine",
+                        "Have a Cigar",
+                        "Wish You Were Here"
+                    ]
+                },
+                {
+                    "title": "Animals",
+                    "year": 1975,
+                    "songs": [
+                        "Pigs on the Wing (Part 1)",
+                        "Dogs",
+                        "Pigs",
+                        "Sheep",
+                        "Pigs on the Wing (Part 2)"
+                    ]
+                }
+            ]
+        },
+        "Dire Straits": {
+            "formation": 1977,
+            "members": [
+                "Mark Knopfler",
+                "John Illsley",
+                "Pick Withers",
+                "David Knopfler",
+                "Alan Clark",
+                "Hal Lindes",
+                "Terry Williams",
+                "Guy Fletcher",
+                "Jack Sonni",
+                "Chris White",
+                "Phil Palmer",
+                "Chris Whitten"
+            ],
+            "albums": [
+                {
+                   "title": "Dire Straits",
+                   "year": 1978,
+                   "songs": [
+                       "Down to the Waterline",
+                       "Water of Love",
+                       "Setting Me Up",
+                       "Six Blade Knife",
+                       "Southbound Again",
+                       "Sultangs of Swing",
+                       "In the Gallery",
+                       "Wild West End",
+                       "Lions"
+                   ] 
+                },
+                {
+                    "title": "Communiqué",
+                    "year": 1979,
+                    "songs": [
+                        "Once Upon a Time in the West",
+                        "News",
+                        "Where Do You Think You're Going?",
+                        "Communiqué",
+                        "Lady Writer",
+                        "Angel of Mercy",
+                        "Portobello Belle",
+                        "Single-Handed Sailor",
+                        "Follow Me Home"
+                    ]
+
+                }
+            ]
+        },
+        "Morons in Suits": {
+            "formation": 2034,
+            "members": [
+                "Mr. T",
+                "Mr. Coffee",
+                "May White"
+            ],
+            "albums": [
+                {
+                    "title": "Almost There",
+                    "year": 2035,
+                    "songs": [
+                        "The rabbit",
+                        "Not quite there",
+                        "I hate myself"
+                    ]
+                }
+            ]
+        }
+    }
+}
