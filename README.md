@@ -33,7 +33,7 @@ These include:
     ** NOTE: This operation adds properties to the data
 
     Example:
-    ```
+    ```js
     var jsonQuery = require('query');
     var _res = jsonQuery({pathPropName: "__path__"}).query("$..[?year>1975]", data)
     ```
