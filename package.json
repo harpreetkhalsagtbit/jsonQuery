@@ -4,7 +4,7 @@
   "description": "Library for Searching in a JSON forked from dojox/json for the users don't want to use dojo in their project but still love and trust the libraries and modules created by Dojo Team",
   "main": "query.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",

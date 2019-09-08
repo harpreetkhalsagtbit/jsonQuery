@@ -30,12 +30,16 @@ These include:
 1) Path in results (Currently not supported when running in browser):
     It is often useful to also recieve the paths to the found items.
     By setting "pathPropName" when creating the JSON Query object, a property name containing the path will be created in each sub-object of the data.
-    ** NOTE: This operation adds properties to the data
+
+    **NOTE**: This operation adds properties to the data
 
     Example:
     ```js
     var jsonQuery = require('query');
     var _res = jsonQuery({pathPropName: "__path__"}).query("$..[?year>1975]", data)
+
+    // output
+    // ['bands']['Dire Straits']['albums']['1']
     ```
 
 # Quality Assurance
