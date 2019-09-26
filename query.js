@@ -36,6 +36,11 @@ jsonQuery._slice = function(obj,start,end,step){
 jsonQuery._find = function e(obj,name){
   // handles ..name, .*, [*], [val1,val2], [val]
   // name can be a property to search for, undefined for full recursive, or an array for picking by index
+
+  // Save some work and avoid saving to cache later
+  if (typeof obj === "undefined")
+    return undefined;
+
   var results = [];
   function walk(obj){
     if(name){
