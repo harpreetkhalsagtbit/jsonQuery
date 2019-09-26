@@ -58,6 +58,15 @@ jsonQuery._find = function e(obj,name){
       }
     }
   }
+
+  // If using cache, take results from it if exists
+  if (this.cacheData && this.cache[name]) {
+    cached_results = this.cache[name].get(obj);
+    if (cached_results) {
+        return cached_results;
+    }
+  }
+
   if(name instanceof Array){
     // this is called when multiple items are in the brackets: [3,4,5]
     if(name.length==1){
@@ -73,6 +82,15 @@ jsonQuery._find = function e(obj,name){
     // otherwise we expanding
     walk(obj);
   }
+
+  // If using cache, update it
+  if (this.cacheData) {
+    if (!this.cache[name]) {
+      this.cache[name] = new WeakMap();
+    }
+    this.cache[name].set(obj, results);
+  }
+
   return results;
 },
 jsonQuery.map = function(arr, callback, thisObject, Ctr){
@@ -372,7 +390,9 @@ if(typeof module != 'undefined' && module.exports) {
     if (params) {
       for (var attrname in params) { jsonQuery[attrname] = params[attrname]; }
     }
-
+    if (jsonQuery['cacheData']) {
+      jsonQuery['cache'] = {};
+    }
     return jsonQuery
   }  
 }
