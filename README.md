@@ -47,10 +47,10 @@ These include:
     This feature will save intermediate processing results to cache which can later be used to greatly reduce query time.
     Especially useful when the JSON is big (millions of records) and queries are similar.
 
-    Example:
+    Example (enabling caching):
     ```js
     var jsonQuery = require('query');
-    var jq = jsonQuery({cacheData: true});
+    var jq = jsonQuery({cacheData: true}); // Create a JsonQuery object with cache
 
     // First query - updates the cache
     var _res1 = jq.query("$..[?year>2000]", data);
@@ -60,6 +60,22 @@ These include:
     var _res2 = jq.query("$..[?year>1976]", data);
     console.log(_res2);
     ```
+
+    Example 2 (caching disabled, works same as original implementation):
+    ```js
+    var jsonQuery = require('query');
+    var jq = jsonQuery(); // JsonQuery without cache
+
+    // First query 
+    var _res1 = jq.query("$..[?year>2000]", data);
+    console.log(_res1);
+
+    // Second query - will take same amount of time as first query
+    var _res2 = jq.query("$..[?year>1976]", data);
+    console.log(_res2);
+    ```
+
+    Note: Enabling caching will incur increased the memory usage that will persist as long as the JsonQuery object is alive 
 # Quality Assurance
 Since the code is same as [Dojox/Json/Query](https://github.com/maqetta/dojox/blob/master/json/query.js). Its Quality is also same. Because it is in [Dojox](https://github.com/dojo/dojox) not in [Dojo](https://github.com/dojo/dojo), it may have some issues.
 

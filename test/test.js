@@ -60,6 +60,9 @@ describe('deepSearchWithCaching', function() {
 });
 
 describe('deepSearchForLargeData', function() {
+
+  this.timeout(4000);
+
   big_data = {
     groups: [],
     creator: "Me"
