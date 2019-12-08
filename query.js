@@ -2,7 +2,7 @@ var jsonQuery = {};
 
 jsonQuery._addPaths = function(obj, path) {
 
-    if(typeof obj !== 'object') {
+    if((typeof obj !== 'object') || (obj === null)) {
         return;
     }
 

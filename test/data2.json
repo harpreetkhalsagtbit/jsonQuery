@@ -117,6 +117,16 @@
                     ]
                 }
             ]
+        },
+        "The Greatest Blunder": {
+            "formation": null,
+            "members": [
+                "Einstein",
+                "Newton",
+                "Kepler",
+                "Heisenberg"
+            ],
+            "albums": null
         }
     }
 }
