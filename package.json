@@ -34,10 +34,14 @@
   },
   "homepage": "https://github.com/harpreetkhalsagtbit/jsonQuery#readme",
   "devDependencies": {
-    "chai": "^3.1.0",
-    "mocha": "^2.2.5"
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   },
   "dependencies": {
-    "husky": "^3.0.5"
+    "assertion-error": "^1.1.0",
+    "deep-eql": "^4.0.0",
+    "husky": "^3.0.5",
+    "type": "^2.0.0",
+    "type-detect": "^4.0.8"
   }
 }
