@@ -35,7 +35,7 @@
   "homepage": "https://github.com/harpreetkhalsagtbit/jsonQuery#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "assertion-error": "^1.1.0",
